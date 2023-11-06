@@ -46,6 +46,15 @@ ax_leg.axis("off")
 fig_leg.savefig('./my_legends.pdf', bbox_inches='tight', pad_inches=0.01)
 ```
 
+Then in latex, you can simply do
+```
+\begin{subfigure}[t]{\linewidth}
+\centering
+ \includegraphics[width=\linewidth]{figs/my_legends.pdf}
+\caption*{}
+\end{subfigure} \\[-3.8ex]
+```
+
 ## Adjust the layouts (e.g. spacing of subplots)
 
 ```python
