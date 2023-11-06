@@ -1,6 +1,11 @@
 # plotting_snippet
 Some common, easy-to-forget, code snippets I used for making plots.
 
+As always, if you are in a notebook, start with
+```
+%config InlineBackend.figure_format='retina'
+```
+to make your plots more eye-friendly
 
 ## Remove upper and right frames
 
@@ -101,4 +106,15 @@ ax.tick_params(axis='both', labelsize=8)
 
 ```python
 ax.set_ylabel('ELBO', fontsize=18, labelpad=12) # The labelpad does the job
+```
+
+## Where to get good colors?
+
+A good website to get colors from the same "family", e.g. you could use the same color family for methods for different variations. 
+https://colorbrewer2.org/
+
+Or if you want to extract colors from the colormap from matplotlib, you could
+```python
+from matplotlib import cm
+my_colors = cm.tab10([0,1,2,4])
 ```
