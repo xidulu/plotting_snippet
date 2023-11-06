@@ -63,7 +63,7 @@ def plot_arrows(X, Y, ax, c, alphas=[0.2, 0.6, 1.0]):
                    color=c, alpha=alphas[i])
 ```
 
-## You wanna use scientific notation for the y axis labels
+## You wanna use scientific notation for the y axis labels and only have the coefficient on the axis but exponent on the top
 
 
 ```python
