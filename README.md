@@ -68,12 +68,15 @@ def plot_arrows(X, Y, ax, c, alphas=[0.2, 0.6, 1.0]):
 
 ```python
 import matplotlib.ticker as mtick
-formatter = mtick.ScalarFormatter(useMathText=True) # If you would like 1x10-5, set it as False if like 1e10-5
-formatter.set_scientific(True) 
-formatter.set_powerlimits((-1,1)) # I don't know what this is for :D
-ax[0].yaxis.set_major_formatter(formatter) 
-ax[0].get_yaxis().get_offset_text().set_position((-0.1,0)) # Change the position of the exponent
-ax[0].get_yaxis().get_offset_text().set_fontsize(8) # Change the size of the exponent
+ # If you would like 1x10-5, set it as False if like 1e10-5
+formatter = mtick.ScalarFormatter(useMathText=True)
+formatter.set_scientific(True)
+# I don't know what (-1, 1) is for :D
+formatter.set_powerlimits((-1,1)) 
+ax[0].yaxis.set_major_formatter(formatter)
+# Change the position and font size of the exponent
+ax[0].get_yaxis().get_offset_text().set_position((-0.1,0))
+ax[0].get_yaxis().get_offset_text().set_fontsize(8)
 ```
 
 
