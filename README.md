@@ -7,6 +7,15 @@ As always, if you are in a notebook, start with
 ```
 to make your plots more eye-friendly
 
+## Smooth the lines
+
+```python
+from scipy.ndimage import uniform_filter1d
+
+def smooth(x):
+    return uniform_filter1d(x, 10)
+```
+
 ## Remove upper and right frames
 
 ```python
