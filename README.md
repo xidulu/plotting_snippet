@@ -1,3 +1,9 @@
+# Let jax use float64
+
+```
+from jax.config import config; config.update("jax_enable_x64", True)
+```
+
 # plotting_snippet
 Some common, easy-to-forget, code snippets I used for making plots.
 
