@@ -4,6 +4,17 @@
 from jax.config import config; config.update("jax_enable_x64", True)
 ```
 
+# Converting float to latex string
+```
+def float_to_str(x):
+    number_sci = f"{x:.1e}"
+    base, exponent = number_sci.split('e')
+    exponent = int(exponent)  # Convert exponent to integer for proper formatting
+    # Proper LaTeX representation
+    latex_sci_notation = r"${{{}}}\times10^{{{}}}$".format(base, exponent)
+    return latex_sci_notation
+```
+
 # plotting_snippet
 Some common, easy-to-forget, code snippets I used for making plots.
 
