@@ -4,6 +4,12 @@
 from jax.config import config; config.update("jax_enable_x64", True)
 ```
 
+# Align all y labels
+
+```
+fig.align_ylabels(ax[:, 0])
+```
+
 # Converting float to latex string
 ```
 def float_to_str(x):
