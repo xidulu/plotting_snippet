@@ -98,6 +98,12 @@ right = 0.98
 fig.subplots_adjust(wspace=0.6, hspace=0.4, left=left, right=right, bottom=bottom, top=top)
 ```
 
+## Set the figure ratio as 0.618
+
+```python
+a.set_box_aspect(aspect=1 / 1.618)
+```
+
 ## You wanna plot some arrows?
 
 ```python
